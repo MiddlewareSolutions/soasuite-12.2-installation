@@ -1,0 +1,76 @@
+NODEMGR_HOME is already set to /SOA/u01/oracle/config/domains/cfl_domain/nodemanager
+CLASSPATH=/usr/jdk/instances/jdk1.8.0/lib/tools.jar:/SOA/u01/oracle/product/fmw/wlserver/server/lib/weblogic.jar:/SOA/u01/oracle/product/fmw/wlserver/../oracle_common/modules/thirdparty/ant-contrib-1.0b3.jar:/SOA/u01/oracle/product/fmw/wlserver/modules/features/oracle.wls.common.nodemanager.jar::/SOA/u01/oracle/product/fmw/wlserver/..:/SOA/u01/oracle/product/fmw/wlserver/modules/features/oracle.wls.common.grizzly.jar
++ /usr/jdk/instances/jdk1.8.0/bin/java -server -d64 -Xms32m -Xmx200m '-Djdk.tls.ephemeralDHKeySize=2048' '-Dcoherence.home=/SOA/u01/oracle/product/fmw/wlserver/../coherence' '-Dbea.home=/SOA/u01/oracle/product/fmw/wlserver/..' '-Doracle.security.jps.config=/SOA/u01/oracle/config/domains/cfl_domain/config/fmwconfig/jps-config-jse.xml' '-Dcommon.components.home=/SOA/u01/oracle/product/fmw/oracle_common' '-Dopss.version=12.2.1.3' '-Dweblogic.RootDirectory=/SOA/u01/oracle/config/domains/cfl_domain' '-Djava.system.class.loader=com.oracle.classloader.weblogic.LaunchClassLoader' '-Djava.security.policy=/SOA/u01/oracle/product/fmw/wlserver/server/lib/weblogic.policy' '-Dweblogic.nodemanager.JavaHome=/usr/jdk/instances/jdk1.8.0' weblogic.NodeManager -v
+<Mar 13, 2019 11:19:47 AM CET> <INFO> <Loading domains file: /SOA/u01/oracle/config/domains/cfl_domain/nodemanager/nodemanager.domains>
+<Mar 13, 2019 11:19:48 AM CET> <INFO> <Loading identity key store: FileName=kss://system/demoidentity, Type=kss, PassPhraseUsed=true>
+Mar 13, 2019 11:19:53 AM oracle.security.opss.internal.runtime.ServiceContextManagerImpl getContext
+WARNING: Bootstrap services are used by OPSS internally and clients should never need to directly read/write bootstrap credentials. If required, use Wlst or configuration management interfaces.
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <Loaded NodeManager configuration properties from '/SOA/u01/oracle/config/domains/cfl_domain/nodemanager/nodemanager.properties'>
+Node manager v12.2.1.3.0
+
+Configuration settings:
+
+DomainsFile=/SOA/u01/oracle/config/domains/cfl_domain/nodemanager/nodemanager.domains
+LogLimit=0
+DomainsDirRemoteSharingEnabled=false
+AuthenticationEnabled=true
+LogLevel=INFO
+DomainsFileEnabled=true
+ListenAddress=soaserver1
+NativeVersionEnabled=true
+ProcessDestroyTimeout=20000
+ListenPort=5556
+LogToStderr=true
+weblogic.StartScriptName=startWebLogic.sh
+SecureListener=true
+LogCount=1
+LogAppend=true
+weblogic.StopScriptEnabled=false
+StateCheckInterval=500
+CrashRecoveryEnabled=true
+weblogic.StartScriptEnabled=true
+LogFile=/SOA/u01/oracle/logs/nodemanager.log
+LogFormatter=weblogic.nodemanager.server.LogFormatter
+coherence.StartScriptEnabled=false
+ListenBacklog=50
+NodeManagerHome=/SOA/u01/oracle/config/domains/cfl_domain/nodemanager
+RestEnabled=false
+weblogic.startup.JavaHome=/usr/jdk/instances/jdk1.8.0
+weblogic.startup.MW_Home=
+coherence.startup.JavaHome=/usr/jdk/instances/jdk1.8.0
+coherence.startup.MW_Home=
+
+Domain name mappings:
+
+cfl_domain -> /SOA/u01/oracle/config/domains/cfl_domain
+
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <12.2.1.3.0>
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <ess_server1> <Startup configuration properties loaded from "/SOA/u01/oracle/config/domains/cfl_domain/servers/ess_server1/data/nodemanager/startup.properties">
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <ess_server1> <Resume monitoring of active server process (pid = 26786)>
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <ess_server1> < Initializing ServerMonitor for weblogic.nodemanager.server.ServerManager@34d45ec0 : with config : weblogic.nodemanager.common.StartupConfig@18137eab>
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <ess_server2> <Startup configuration properties loaded from "/SOA/u01/oracle/config/domains/cfl_domain/servers/ess_server2/data/nodemanager/startup.properties">
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <ess_server2> <Resume monitoring of active server process (pid = 27757)>
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <ess_server2> < Initializing ServerMonitor for weblogic.nodemanager.server.ServerManager@46f902e0 : with config : weblogic.nodemanager.common.StartupConfig@64f981e2>
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <soa_server2> <Startup configuration properties loaded from "/SOA/u01/oracle/config/domains/cfl_domain/servers/soa_server2/data/nodemanager/startup.properties">
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <soa_server2> <Resume monitoring of active server process (pid = 24611)>
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <soa_server2> < Initializing ServerMonitor for weblogic.nodemanager.server.ServerManager@361abd01 : with config : weblogic.nodemanager.common.StartupConfig@575b5f7d>
+<Mar 13, 2019 11:19:53 AM CET> <INFO> <cfl_domain> <AdminServer> <Startup configuration properties loaded from "/SOA/u01/oracle/config/domains/cfl_domain/servers/AdminServer/data/nodemanager/startup.properties">
+<Mar 13, 2019 11:19:54 AM CET> <INFO> <cfl_domain> <AdminServer> <Resume monitoring of active server process (pid = 15987)>
+<Mar 13, 2019 11:19:54 AM CET> <INFO> <cfl_domain> <AdminServer> < Initializing ServerMonitor for weblogic.nodemanager.server.ServerManager@7165d530 : with config : weblogic.nodemanager.common.StartupConfig@12f49ca8>
+<Mar 13, 2019 11:19:54 AM CET> <INFO> <cfl_domain> <soa_server1> <Startup configuration properties loaded from "/SOA/u01/oracle/config/domains/cfl_domain/servers/soa_server1/data/nodemanager/startup.properties">
+<Mar 13, 2019 11:19:54 AM CET> <INFO> <cfl_domain> <soa_server1> <Resume monitoring of active server process (pid = 21639)>
+<Mar 13, 2019 11:19:54 AM CET> <INFO> <cfl_domain> <soa_server1> < Initializing ServerMonitor for weblogic.nodemanager.server.ServerManager@1fd9893c : with config : weblogic.nodemanager.common.StartupConfig@1b2df3aa>
+<Mar 13, 2019 11:19:54 AM CET> <INFO> <Server Implementation Class: weblogic.nodemanager.server.NMServer$ClassicServer.>
+<Mar 13, 2019 11:19:54 AM CET> <INFO> <Secure socket listener started on port 5556, host soaserver1/10.1.4.217>
+<Mar 13, 2019 11:21:19 AM CET> <INFO> <cfl_domain> <soa_server1> <The server 'soa_server1' with process id 21639 is no longer alive; waiting for the process to die.>
+<Mar 13, 2019 11:21:19 AM CET> <INFO> <cfl_domain> <soa_server1> <Server was killed>
+<Mar 13, 2019 11:21:19 AM CET> <INFO> <cfl_domain> <soa_server2> <The server 'soa_server2' with process id 24611 is no longer alive; waiting for the process to die.>
+<Mar 13, 2019 11:21:19 AM CET> <INFO> <cfl_domain> <soa_server2> <Server was killed>
+<Mar 13, 2019 11:21:20 AM CET> <INFO> <cfl_domain> <ess_server1> <The server 'ess_server1' with process id 26786 is no longer alive; waiting for the process to die.>
+<Mar 13, 2019 11:21:20 AM CET> <INFO> <cfl_domain> <ess_server1> <Server was killed>
+<Mar 13, 2019 11:21:20 AM CET> <INFO> <cfl_domain> <ess_server2> <The server 'ess_server2' with process id 27757 is no longer alive; waiting for the process to die.>
+<Mar 13, 2019 11:21:20 AM CET> <INFO> <cfl_domain> <ess_server2> <Server was killed>
+<Mar 13, 2019 11:22:08 AM CET> <INFO> <cfl_domain> <AdminServer> <The server 'AdminServer' with process id 15987 is no longer alive; waiting for the process to die.>
+<Mar 13, 2019 11:22:08 AM CET> <INFO> <cfl_domain> <AdminServer> <Server was killed>
++ status=143
+/root
