@@ -15,7 +15,13 @@ echo Create Central Oracle Directory
 
 echo _______________________________________________________________________________
 echo Create Central Oracle Directory
-./oracle-createCentralInventory.sh /var/opt/oracle oinstall
+if [ "$PLATFORMID" = "Linux" ] then
+   ./oracle-createCentralInventory.sh /etc oinstall
+fi
+
+if [ "$PLATFORMID" = "SunOS" ] then
+   ./oracle-createCentralInventory.sh /var/opt/oracle oinstall
+fi
 
 cd ..
 

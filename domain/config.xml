@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<domain xsi:schemaLocation="http://xmlns.oracle.com/weblogic/security/wls http://xmlns.oracle.com/weblogic/security/wls/1.0/wls.xsd http://xmlns.oracle.com/weblogic/domain http://xmlns.oracle.com/weblogic/1.0/domain.xsd http://xmlns.oracle.com/weblogic/security http://xmlns.oracle.com/weblogic/1.0/security.xsd http://xmlns.oracle.com/weblogic/security/xacml http://xmlns.oracle.com/weblogic/security/xacml/1.0/xacml.xsd" xmlns="http://xmlns.oracle.com/weblogic/domain" xmlns:sec="http://xmlns.oracle.com/weblogic/security" xmlns:wls="http://xmlns.oracle.com/weblogic/security/wls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<domain xsi:schemaLocation="http://xmlns.oracle.com/weblogic/security/wls http://xmlns.oracle.com/weblogic/security/wls/1.0/wls.xsd http://xmlns.oracle.com/weblogic/domain http://xmlns.oracle.com/weblogic/1.0/domain.xsd http://xmlns.oracle.com/weblogic/security http://xmlns.oracle.com/weblogic/1.0/security.xsd http://xmlns.oracle.com/weblogic/security/xacml http://xmlns.oracle.com/weblogic/security/xacml/1.0/xacml.xsd" 
+  xmlns="http://xmlns.oracle.com/weblogic/domain" 
+  xmlns:sec="http://xmlns.oracle.com/weblogic/security" 
+  xmlns:wls="http://xmlns.oracle.com/weblogic/security/wls" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <name>cfl_domain</name>
   <domain-version>12.2.1.3.0</domain-version>
-  <security-configuration xmlns:xacml="http://xmlns.oracle.com/weblogic/security/xacml" xmlns:pas="http://xmlns.oracle.com/weblogic/security/providers/passwordvalidator">
+  <security-configuration xmlns:xacml="http://xmlns.oracle.com/weblogic/security/xacml" 
+    xmlns:pas="http://xmlns.oracle.com/weblogic/security/providers/passwordvalidator">
     <name>cfl_domain</name>
     <realm>
-      <sec:authentication-provider xsi:type="prov:trust-service-identity-asserterType" xmlns:prov="http://xmlns.oracle.com/oracleas/schema/11/jps/weblogic/providers">
+      <sec:authentication-provider xsi:type="prov:trust-service-identity-asserterType" 
+        xmlns:prov="http://xmlns.oracle.com/oracleas/schema/11/jps/weblogic/providers">
         <sec:name>Trust Service Identity Asserter</sec:name>
       </sec:authentication-provider>
       <sec:authentication-provider xsi:type="wls:default-authenticatorType">
@@ -1849,7 +1855,7 @@
     <directory/>
     <target>AdminServer</target>
   </file-store>
--->  
+-->
   <jdbc-store>
     <name>SOAJMSJDBCStore</name>
     <prefix-name>SOA</prefix-name>

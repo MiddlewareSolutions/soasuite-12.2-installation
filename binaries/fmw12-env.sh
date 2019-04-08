@@ -7,5 +7,8 @@ export SOA_HOME=$FMW_HOME/soa
 export OSB_HOME=$FMW_HOME/osb
 export MFT_HOME=$FMW_HOME/mftOME/mft
 
-# change it for PROD, QUA or DEV
-export SOA_ENV=QUA
+# change it for PROD, QUA, DEV or LOCAL
+export SOA_ENV=LOCAL
+export RCU_URI=localhost:1521:XE
+
+export PLATFORMID=`uname -a | awk '{{print $1}}'`

@@ -39,9 +39,9 @@ fi
 
 echo "Creating inventory pointer file in $INVDIR directory"
 if [ -d $INVDIR ]; then
-chmod 755 $INVDIR;
+  chmod 755 $INVDIR;
 else
-mkdir -p $INVDIR;
+  mkdir -p $INVDIR;
 fi
 INVPTR=${INVDIR}/oraInst.loc
 INVLOC=$1
@@ -49,7 +49,7 @@ GRP=$2
 PTRDIR="`dirname $INVPTR`";
 # Create the software inventory location pointer file
 if [ ! -d "$PTRDIR" ]; then
- mkdir -p $PTRDIR;
+  mkdir -p $PTRDIR;
 fi
 echo "Creating the Oracle inventory pointer file ($INVPTR)";
 echo    inventory_loc=$INVLOC > $INVPTR
