@@ -2,7 +2,8 @@ def startServer(servername):
   running = 'RUNNING'
   if nmServerStatus(servername) != running :
     print 'Starting '+servername+'...'
-    nmStart(servername)
+    prps = makePropertiesObject("AdminURL=http://adminserver:7001;Username="+nodemgr_user+";Password="+nodemgr_pwd)
+    nmStart(servername,props=prps)
   printState(servername)
 
 def printState(servername):

@@ -338,9 +338,9 @@ if [ "${STARTUP_GROUP}" = "AdminServerStartupGroup" ] ; then
 	#SERVER_MEM_ARGS_64="-Xms768m -Xmx1536m"
 	SERVER_MEM_ARGS_64="-Xms512m -Xmx2g"
 	export SERVER_MEM_ARGS_64
-	SERVER_MEM_ARGS_64HotSpot="-Xms768m -Xmx1536m"
+	SERVER_MEM_ARGS_64HotSpot="-Xms1g -Xmx2g -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode"
 	export SERVER_MEM_ARGS_64HotSpot
-	SERVER_MEM_ARGS_64JRockit="-Xms768m -Xmx1536m"
+	SERVER_MEM_ARGS_64JRockit="-Xms1g -Xmx2g"
 	export SERVER_MEM_ARGS_64JRockit
 	# Other java arguments
 	SERVER_GENERIC_ARGS_PRODUCTION="-d64"
@@ -726,8 +726,8 @@ if [ "${STARTUP_GROUP}" = "SOA-MGD-SVRS" ] ; then
 	SERVER_MEM_ARGS_64="-Xms2g -Xmx4g"
 	export SERVER_MEM_ARGS_64
 	#SERVER_MEM_ARGS_64HotSpot="-Xms768m -Xmx1536m"
-	SERVER_MEM_ARGS_64HotSpot="-Xms2g -Xmx4g"
-        export SERVER_MEM_ARGS_64HotSpot
+	SERVER_MEM_ARGS_64HotSpot="-Xms2g -Xmx4g -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode"
+    export SERVER_MEM_ARGS_64HotSpot
 	SERVER_MEM_ARGS_64JRockit="-Xms768m -Xmx1536m"
 	export SERVER_MEM_ARGS_64JRockit
 	# Other java arguments

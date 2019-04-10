@@ -6,6 +6,10 @@ echo Adapt environment on fmw12-env.sh
 pause
 
 echo _______________________________________________________________________________
+echo Set Environement variables
+. ./fmw12-env.sh
+
+echo _______________________________________________________________________________
 echo Java SDK 8
 ./fmw12-jdk.sh
 

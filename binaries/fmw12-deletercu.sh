@@ -7,4 +7,4 @@ export RCU_SOA_PWD=rcuSOAPasswords.$SOA_ENV.txt
 
 echo delete RCU for environment $SOA_ENV
 
-$FMW_HOME/oracle_common/bin/rcu -silent -dropRepository -connectString $RCU_URI -dbUser SYS -dbRole SYSDBA -schemaPrefix ALL -component STB -component ESS -component OPSS -component SOAINFRA -component UCSUMS -component IAU -component IAU_APPEND -component IAU_VIEWER -component MDS -component WLS -f < $PWD/$RCU_SOA_PWD
+$FMW_HOME/oracle_common/bin/rcu -silent -dropRepository -connectString $RCU_URI -dbUser SYS -dbRole SYSDBA -schemaPrefix $SOA_ENV -component STB -component ESS -component OPSS -component SOAINFRA -component UCSUMS -component IAU -component IAU_APPEND -component IAU_VIEWER -component MDS -component WLS -f < $PWD/$RCU_SOA_PWD
