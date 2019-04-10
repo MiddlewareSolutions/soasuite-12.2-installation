@@ -1,1 +1,3 @@
 binaries/*.jar
+**/*PRD*
+**/*QUA*
