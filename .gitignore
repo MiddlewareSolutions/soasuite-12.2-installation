@@ -1,3 +1,9 @@
 binaries/*.jar
-**/*PRD*
-**/*QUA*
+/binaries/*.PRD.rsp
+/binaries/*.QUA.rsp
+/binaries/*.PRD.txt
+/binaries/*.QUA.txt
+/domain/*.PRD.properties
+/domain/*.QUA.properties
+/scripts/*.PRD.properties
+/scripts/*.QUA.properties
